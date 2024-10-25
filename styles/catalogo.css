@@ -1,0 +1,109 @@
+/* Estilos por defecto */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*---------- Header ----------*/
+/* header nav button */
+.header {
+    container-type: inline-size;
+    container-name: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header__checkbox {
+    display: none;
+}
+
+.open__nav-button {
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    left: 10px;
+}
+
+.header__checkbox:checked ~ .header__nav-menu {
+    display: flex;
+}
+
+/* header nav naevgacion */
+.header__nav-menu {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.header__nav-item {
+    list-style: none;
+}
+
+.header__nav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header__nav-item a:is(:hover,:active) {
+    text-decoration: underline;
+}
+
+/* Logo */
+.header__logo-container {
+    margin: auto;
+}
+
+.header-logo {
+    max-width: 100%;
+}
+
+@container header (min-width:600px) {
+    
+    .header__logo-container {
+        margin: 0 0 0 3rem;
+    }
+
+    .header__nav-menu {
+        display: block;
+        position: static;
+        height: auto;
+        width: auto;
+        justify-content: space-between;
+        margin-right: 5rem ;
+    } 
+
+    .header__nav-list {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 2rem;
+    }
+
+    .open__nav-button {
+        display: none;
+    }
+}
