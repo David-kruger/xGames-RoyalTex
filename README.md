@@ -1,6 +1,9 @@
 # xGames-RoyalTex
 Prototipo versión 1, solución para royal tex, pagina web
 
+Para nuestra propuesta para Royal tex nos planteamos realizar una renovación de imágen, tanto de colores, como de identida de marca
+
+
 
 
 Versionamento de prototipos en Miro 
