@@ -191,6 +191,11 @@ body {
     padding-top: 11px; 
     position: relative;
     z-index: 20;
+}   
+
+.catetgory__nav-wrapper {
+    width: 500px;
+    overflow-x: hidden;
 }
 
 .open__category-button {
@@ -210,7 +215,8 @@ body {
     width: 100vw;
     top: 0;
     z-index: -1;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .category-checkbox:checked ~ .catetgory__nav {
