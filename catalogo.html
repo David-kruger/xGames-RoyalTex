@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/catalogo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -53,6 +53,149 @@
     </header>
 
     <main class="main">
+
+        <div class="main__wrapper">
+
+            <aside class="category">
+                <input type="checkbox" id="open-category" class="category-checkbox">
+                <label for="open-category" class="open__category-button" role="button"><i class="fa-solid fa-arrow-down-wide-short fa-lg"></i></label>
+                <nav class="catetgory__nav">
+
+                    <div class="catetgory__nav-wrapper">
+                        <form class="catetgory__nav-form" action="">
+                            <span>Ordenar por</span>
+                            <label for="destacado"><input type="radio" id="destacado" name="destacado" value="0"> Destacados</label>
+                            <label for="recientet"><input type="radio" id="reciente" name="destacado" value="1"> Mas reciente</label>
+                            <label for="altobajo"><input type="radio" id="altobajo" name="destacado" value="2"> Precio: alto-bajo</label>
+                            <label for="bajoalto"><input type="radio" id="bajoalto" name="destacado" value="3"> Precio: bajo-alto</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Genero</span>
+                            <label for="hombre"><input type="checkbox" id="hombre" name="hombre" value="h"> Hombre</label>
+                            <label for="mujer"><input type="checkbox" id="mujer" name="mujer" value="m"> Mujer</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Por Línea</span>
+                            <label for="precio1"><input type="checkbox" id="precio1" name="menos" value="4"> Administrativa</label>
+                            <label for="precio2"><input type="checkbox" id="precio2" name="inter57" value="5">Corporativa</label>
+                            <label for="precio3"><input type="checkbox" id="precio3" name="inter71" value="6">Operativa</label>
+                            <label for="precio4"><input type="checkbox" id="precio4" name="mas" value="7">Accesorios</label>
+                        </form>
+                        
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                    </div>
+
+                </nav>
+            </aside>
+    
+            <div class="main_main">
+                <div class="main__grid">
+
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/woman1.png" loading="lazy" alt="calzado masculino">
+                            <h6>Línea Administrativa</h6>
+                            <h6>Mmujer</h6>
+                            <h6>$45,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/woman2.png" loading="lazy" alt="calzado femenino">
+                            <h6>Línea Administrativa</h6>
+                            <h6>Mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/woman3.png" loading="lazy" alt="calzado femenino">
+                            <h6>Línea Administrativa</h6>
+                            <h6>Mujer</h6>
+                            <h6>$54,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/man1.png" loading="lazy" alt="calzado masculino">
+                            <h6>Línea Administrativa</h6>
+                            <h6>Hombre</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/man2.png" loading="lazy" alt="calzado femenino">
+                            <h6>Línea Administrativa</h6>
+                            <h6>Hombre</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/man3.png" loading="lazy" alt="calzado masculino">
+                            <h6>Línea Administrativa</h6>
+                            <h6>Hombre</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/oper1.png" loading="lazy" alt="calzado masculino">
+                            <h6>Línea Operativa</h6>
+                            
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/oper2.png" loading="lazy" alt="calzado masculino">
+                            <h6>Línea Operativa</h6>
+                            
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/oper3.png" loading="lazy" alt="calzado masculino">
+                            <h6>Línea Operativ</h6>
+                            
+                            <h6>$45,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/acc1.png" loading="lazy" alt="calzado femenino">
+                            <h6>Accesorios</h6>
+                            
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/acc2.png" loading="lazy" alt="calzado femenino">
+                            <h6>Accesorios</h6>
+                            
+                            <h6>$54,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="./img/catalogo/acc3.png" loading="lazy" alt="calzado masculino">
+                            <h6>Accesorios</h6>
+                            
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+        </div>
 
         <div class="whatsAppButton">
             <a href="">
