@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Poppins",sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,8 +21,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 13px 0;
     position: relative;
     z-index: 10;
+    background-color: #2C2E43;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3px;
 }
 
 .header__checkbox {
@@ -43,7 +50,8 @@ body {
 /* header nav naevgacion */
 .header__nav-menu {
     display: none;
-    background-color: #fff;
+    background-color: #2C2E43;
+    color: white;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -75,6 +83,21 @@ body {
 /* Logo */
 .header__logo-container {
     margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__logo-container svg{
+    width: 50px;
+    height: 40px;
+}
+
+.header__logo-container span {
+    /* font-family: 'AmstelvarAlpha',sans-serif; */
+    font-size: 48px;
+    letter-spacing: 5px;
+    display: none;
 }
 
 .header-logo {
@@ -85,6 +108,11 @@ body {
     
     .header__logo-container {
         margin: 0 0 0 3rem;
+    }
+
+    .header__logo-container svg{
+        width: 70px;
+        height: 88px;
     }
 
     .header__nav-menu {
@@ -107,3 +135,543 @@ body {
         display: none;
     }
 }
+
+@container header (min-width:900px) { 
+    .header__logo-container span {
+        display: block;
+    }
+}
+
+/*------------- end header -------------------*/
+
+
+/* -------- PORTADA -------------------- */
+.portada {
+    position: relative;
+    container-type: inline-size;
+    container-name: portada;
+}
+
+.portada__img-container img {
+    /* max-height: 500px; */
+    width: 100%;
+}
+
+/* -------------------------------- */
+.portada_info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: "Trykker", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.portada_img-logo {
+    display: flex;
+    flex-direction: column;
+} 
+
+.portada_img-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.portada_img-logo span {
+    color: white;
+    width: 120px;
+    text-wrap: wrap;
+}
+
+.portada_info-text {
+    display: none;
+    color: white;
+    text-wrap: wrap;
+    font-size: 24px;
+    max-width: 550px;
+    margin-top: 3rem;
+}
+
+@container portada (min-width:750px) {
+    
+    .portada_info { 
+        top: 20px;
+        left: 30px;
+    }
+
+    .portada_img-logo {
+        flex-direction: row;
+        align-items: center;
+        gap:  3rem;
+    }
+
+    .portada_img-logo img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .portada_img-logo span {
+        font-size: 32px;
+        width: 320px;
+        text-wrap: pretty;
+    }
+
+    .portada_info-text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+/* ---------------------------------------- */
+
+/* -----------MAIN------------------------- */
+.main {
+    container-type: inline-size;
+    container-name: main;
+}
+
+/* ----------MAIN mensaje inicio */
+.main__message-inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 3rem 0;
+    
+}
+
+.main__message-inicio span {
+    color: black;
+}
+
+.main__message-inicio span:nth-child(1) {
+    font-family: "Trykker", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+
+@container main (min-width:600px) { 
+
+    .main__message-inicio {
+        flex-direction: row;
+        align-items: baseline;
+        
+    }    
+
+    .main__message-inicio span:nth-child(1) {
+        font-size: 50px;
+    }
+
+}
+/* ------------------------------------------ */
+
+/* Main message */
+.main__message, .main__message-aboutus {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.main__message p,  .message-aboutus{
+    flex: 1 1 50%;
+    text-wrap: pretty;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.main__message picture,.main__message picture img ,.main__message-aboutus picture,.main__message-aboutus picture img{
+    flex: 1 1 50%;
+}
+
+.main__message picture img, .main__message-aboutus picture img {
+    width: 100%;
+    min-width: 200px;
+    max-width: 100%;
+    height: auto;
+ }
+
+ .main__message-aboutus {
+    flex-direction: column-reverse;
+}
+
+ @container main (min-width:600px) { 
+    .main__message, .main__message-aboutus {
+        flex-direction: row;
+    }
+}
+/* ---------------------------------- */
+
+/* main about us */
+
+
+.message-aboutus {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.message-aboutus p {
+    white-space: pre-line;
+}
+
+@container main (min-width:1000px) { 
+    .main__message p,  .message-aboutus{ 
+        font-size: 24px;
+    }
+
+}
+
+/* main mision */
+.main__mision {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.main__mision p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+@container main (min-width:1000px) { 
+    .main__mision p {
+        font-size: 24px;
+    }
+}
+/* --------------------------------- */
+
+/* main banner */
+.main__banner {
+    padding-bottom: 3rem;
+}
+
+.main__banner img {
+    width: 100%;
+    /* min-height: 120px; */
+    height: auto;
+}
+/* ----------------------------- */
+
+/* main catalogo */
+.main__catalogo {
+    background-color: #eee;
+    margin: 3rem auto;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.catalog-message {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.catalog-message p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.catalog-message button {
+    padding: 1em 2rem;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.main__catalogo picture {
+    flex: 1 1 50%;
+}
+
+.main__catalogo picture  img {
+    width: 100%;
+    min-width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+@container main (min-width:600px) { 
+    .main__catalogo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .main__catalogo p {
+        text-align: start;
+        text-wrap: pretty;
+    }
+}
+
+@container main (min-width:1000px) { 
+    .main__catalogo {
+        font-size: 24px;
+    }
+}
+/* ----------------------------------- */
+
+/* main uniformes */
+.main__adduniformes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    gap: 1rem;
+    padding: 3rem 2rem;
+}
+
+.main__adduniformes div {
+    margin-top: 2rem;
+    width: 80%;
+    height: 1rem;
+    border-radius: 10px;
+    background: rgb(246,121,73);
+    background: linear-gradient(90deg, rgba(246,121,73,1) 0%, rgba(173,109,93,1) 25%, rgba(77,93,119,1) 50%, rgba(62,72,96,1) 75%, rgba(44,46,67,1) 100%);
+    align-self: center;
+}
+
+@container main (min-width:1000px) {
+    .main__adduniformes h2,p {
+        font-size: 24px;
+    }
+}
+/* -------------------------------------- */
+
+/* main uniformes pasos */
+.main__uniformes-pasos {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.first_row , .second_row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem   ;
+} 
+
+.pasos-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    max-width: 400px;
+    padding: 1em;
+}
+
+@container main (min-width:600px) { 
+    .first_row , .second_row {
+        flex-direction: row;
+    } 
+}
+/* -------------------------------- */
+
+/* main ventaja */
+.main__ventaja {
+    background-color: #eee;
+    margin: 3rem auto;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventaja-texto {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ventaja-card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card-1 ,.card-2 {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-width: 1px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.75);
+    border-radius: 50px ;
+    padding: 3rem 2rem;
+    font-size: 16px;
+}
+
+@container main (min-width:600px) { 
+    .ventaja-card {
+        flex-direction: row;
+    } 
+    
+}
+/* ----------------------------- */
+
+/* main marcas */
+.main__marcas {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.marcasrow1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.marcasrow1 div, .marcasrow2 div {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-width: 1px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.marcasrow1 img, .marcasrow2 img {
+    width: 100%;
+    height: auto;
+}
+/* ---------------end main--------------------- */
+
+/* =--------------footer -----------------------*/
+.footer {
+    container-type: inline-size;
+    container-name: footer;
+    background-color: #4d5d77;
+    padding: 3rem;
+}
+
+.footer section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-marca {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-marca span{
+    font-size: 12px;
+    width: 250px;
+    text-wrap: pretty;
+
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__logo span {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.footer__adress {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.adress-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-icon {
+    min-width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.item-icon i {
+    vertical-align:text-bottom;
+}
+
+.item-adress h4, span {
+    display: inline-block;
+    text-wrap: pretty;
+    color: white;
+}
+
+@container footer (min-width:600px) {
+    .footer section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer__adress {
+        max-width: 700px;
+    }
+}
+/* ------end footer------------- */
+
+/* -------whatsApp button */
+.whatsAppButton {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+@container main (min-width:600px) {
+
+    .data__container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+}
+/* -------------------------- */
+
+

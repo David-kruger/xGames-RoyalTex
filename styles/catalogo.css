@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Poppins",sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,8 +21,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 13px 0;
     position: relative;
     z-index: 10;
+    background-color: #2C2E43;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 3px;
 }
 
 .header__checkbox {
@@ -43,7 +50,8 @@ body {
 /* header nav naevgacion */
 .header__nav-menu {
     display: none;
-    background-color: #fff;
+    background-color: #2C2E43;
+    color: white;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -75,6 +83,21 @@ body {
 /* Logo */
 .header__logo-container {
     margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__logo-container svg{
+    width: 50px;
+    height: 40px;
+}
+
+.header__logo-container span {
+    /* font-family: 'AmstelvarAlpha',sans-serif; */
+    font-size: 48px;
+    letter-spacing: 5px;
+    display: none;
 }
 
 .header-logo {
@@ -85,6 +108,11 @@ body {
     
     .header__logo-container {
         margin: 0 0 0 3rem;
+    }
+
+    .header__logo-container svg{
+        width: 70px;
+        height: 88px;
     }
 
     .header__nav-menu {
@@ -107,3 +135,128 @@ body {
         display: none;
     }
 }
+
+@container header (min-width:900px) { 
+    .header__logo-container span {
+        display: block;
+    }
+}
+
+/*------------- end header -------------------*/
+
+/* ---------------------main---------------- */
+
+
+/* ---------------end main --------------------*/
+
+
+
+/* ---------------Footer --------------------*/
+
+.footer {
+    container-type: inline-size;
+    container-name: footer;
+    background-color: #4d5d77;
+    padding: 3rem;
+}
+
+.footer section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-marca {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-marca span{
+    font-size: 12px;
+    width: 250px;
+    text-wrap: pretty;
+
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__logo span {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.footer__adress {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.adress-item {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-icon {
+    min-width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.item-icon i {
+    vertical-align:text-bottom;
+}
+
+.item-adress h4, span {
+    display: inline-block;
+    text-wrap: pretty;
+    color: white;
+}
+
+@container footer (min-width:600px) {
+    .footer section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer__adress {
+        max-width: 700px;
+    }
+}
+
+/* -------------end footer--------------------- */
+
+/* -------whatsApp button */
+.whatsAppButton {
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+@container main (min-width:600px) {
+
+    .data__container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+}
+/* -------------------------- */
